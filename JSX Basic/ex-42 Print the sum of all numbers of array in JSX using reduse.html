@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print the sum of all numbers in an array in JSX using reduse method. </title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=[1,2,34,55,67,1,22,334,44]
+            var san=<h1>{ar.reduce(function(a,b){
+                return a+b;
+            },0)}</h1>
+            ReactDOM.render(san,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Apply the color names stored in two variable to JSX different h1
+        </title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var a='red';
+            var b='green';
+            var hedc= <div>
+                <h1 style={{color:a}}>Hello Mani</h1>
+                <h1 style={{color:b}}>Hello Mani</h1>
+                </div>
+            ReactDOM.render(hedc,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

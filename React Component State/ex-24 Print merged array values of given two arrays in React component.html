@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Print merged array values of given two arrays in React component.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Mergetwoarrays(){
+                var [x,setX]=React.useState([1,2,3,4,5,6,7,8,9,10])
+                var [y,setY]=React.useState([11,12,13,14,15,16,17,18,19,20])
+                return(
+                    <ul>{x.concat(y).map((a)=><li>{a}</li>)}</ul>
+                )
+            }
+            ReactDOM.render(<Mergetwoarrays/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

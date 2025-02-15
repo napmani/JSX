@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Print array values in sorted order in list items in React component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Arrayvaluesinsortedorder(){
+                var [x,setX]=React.useState([1,34,5,3,21,345,6787654,456787654323456,78765,6787654,5676])
+                return(
+                    <ol>{x.sort((a,b)=>a-b).map((c)=><li>{c}</li>)}</ol>
+                )
+            }
+            ReactDOM.render(<Arrayvaluesinsortedorder/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

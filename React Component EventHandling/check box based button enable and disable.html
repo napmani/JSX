@@ -1,0 +1,52 @@
+<!-- <html>
+    <head>
+        <title>Check box (or) terms and conditions (or) button onn and off based on check box</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Checkbox(){
+                var [cb,setCb]=React.useState(true)
+                function check(){
+                    setCb(!cb)
+                }
+                return(
+                    <div>
+                        <input type="checkbox" onChange={()=>check()}/>I accept terms and conditions.<br/>
+                        <button disabled={cb}>Enter</button>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Checkbox/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>Check box (or) terms and conditions (or) button onn and off based on check box</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Button(){
+                var [c,setC]=React.useState('true')
+                function check(e){
+                    setC(!e.target.checked)
+                }
+                return(
+                    <div>
+                        <input type="checkbox" onChange={(e)=>check(e)}/>I accept terms and condtions.
+                        <br/>
+                        <button disabled={c}>Enter</button>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Button/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Print the images from array of image urls in React component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            img{
+                height: 100px;
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Arrayofimg(){
+                var [x,setX]=React.useState(['https://th.bing.com/th/id/OIP.t1pJQVAwnj3yS2JpCZ8DhgHaEK?w=287&h=182&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                'https://th.bing.com/th/id/OIP.38hI-NBpOWcN8RCAk052EgHaEK?w=282&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                'https://th.bing.com/th/id/OIP.zFDDhjtbcsehphYAco2t5gHaEK?w=319&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                'https://th.bing.com/th/id/OIP.A5eruoydM4eQF84bF4DUcgHaFj?w=249&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                'https://th.bing.com/th/id/OIP.t0I9H67Tu-cFt9X0rMZilQHaFj?w=248&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                'https://th.bing.com/th/id/OIP.H4H8VGsX_8PPFS8ztsi3LwHaD5?w=312&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                'https://th.bing.com/th/id/OIP.G9kTyzWdKMSOmbfqpgMFdgHaEK?w=302&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'])
+                return(
+                    <div>{x.map((a)=><img src={a}/>)}</div>
+                )
+            }
+            ReactDOM.render(<Arrayofimg/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

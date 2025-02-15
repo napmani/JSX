@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Display greatest of two variable values in React component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Greatest(){
+                var [a,setA]=React.useState(+prompt())
+                var [b,setB]=React.useState(+prompt())
+                return(
+                    <h1>{a>b?a:b}</h1>
+                )
+            }
+            ReactDOM.render(<Greatest/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Apply green color if variable value is even red for odd
+            in React Component</title>
+            <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>    
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Variablevalue(){
+                var [x,setX]=React.useState(+prompt())
+                return(
+                    <h1 style={x%2==0?{color:'green'}:{color:'red'}}>{x}</h1>
+                )
+            }
+            ReactDOM.render(<Variablevalue/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

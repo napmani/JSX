@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Likes and dislikes JSX</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            button{
+                margin: 5px;
+            }
+            #d1,#d2{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var a=0;
+            var b=0;
+            function like(){
+                a++
+                document.getElementById('h1').innerHTML=a
+            }
+            function dislike(){
+                b++;
+                document.getElementById('h2').innerHTML=b
+            }
+          var Likes=<div>
+            <div id='d1'><h1>Likes:</h1> <h1 id='h1'>{a}</h1></div>
+            <div id='d2'> <h1>Dislikes:</h1><h1 id='h2'>{b}</h1></div>
+            <button onClick={like}>Like</button>
+            <button onClick={dislike}>Dislike</button>
+            </div> 
+            ReactDOM.render(Likes,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

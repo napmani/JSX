@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Print the given array of students in cards in React component.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            div{
+                margin: 10px;
+                padding: 10px;
+                border: 2px solid blue;
+                background-color: skyblue;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Cards(){
+                var [x,setX]=React.useState([{name:'mani', class:'12th',age:'22',gender:'m'},
+                {name:'sai',class:'10th',age:'18',gender:'f'},
+                {name:'nani',class:'11th',age:'19',gender:'m'},
+                {name:'ani',class:'12th',age:'20',gender:'f'}
+            ])
+            return(
+                <>{x.map((a)=><div>
+                    <h1>Name:{a.name}</h1>
+                    <h1>Class:{a.class}</h1>
+                    <h1>Age:{a.gender}</h1>
+                    <h1>gender:{a.gender}</h1>
+                    </div>)}</>
+            )
+            }
+            ReactDOM.render(<Cards/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

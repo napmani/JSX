@@ -1,0 +1,33 @@
+<!-- <html>
+    <head>
+        <title>Conditionally apply url to image inJSX.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var a="https://th.bing.com/th/id/OIP.gaA0eUt30ZQk8jc9USly3AHaJ3?w=136&h=182&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+            var cauti= <img src={a}></img>
+            ReactDOM.render(cauti,document.getElementById('d1'))
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>Conditionally apply url to image in JSX.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id =d1></div>
+        <script type="text/babel">
+            var a=+prompt()
+            var cauti=<img src={(a>=0)?("https://th.bing.com/th/id/OIP.x4_fv3CW_j4L9St0oDDL2gHaNK?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"):("https://th.bing.com/th/id/OIP.fQtXOaIUF7S5FK63QG62KAHaQB?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7")}></img>
+            ReactDOM.render(cauti,document.getElementById('d1'))
+        </script>
+    </body>
+</html>

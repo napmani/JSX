@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Display each object properties in React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            div{
+                height: 250px;
+                width: 500px;
+                border: 3px solid rgb(30, 9, 224);
+                background-color: rgb(72, 202, 217);
+                margin: 10px;
+                padding: 20px;
+                
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Objectproperties(){
+                var [x,setX]=React.useState({name:'Manikanta',salary:40000,age:22,gender:'Male'})
+                return(
+                    <div>
+                        <h1>Name:{x['name']}</h1>
+                        <h1>Salary:{x['salary']}</h1>
+                        <h1>age:{x['age']}</h1>
+                        <h1>Gender:{x['gender']}</h1>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Objectproperties/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

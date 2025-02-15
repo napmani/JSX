@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Display each array object in flex boxes in React Component
+        </title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            .d1{
+                display: inline-block;
+                margin: 10px;
+                padding: 20px;
+                width: 400px;
+                height: 350px;
+                
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Employee(){
+                var [employe,setEmploye]=React.useState([ { id: 101, name: "John Doe", age: 30, gender: "Male", department: "Engineering", email: "john.doe@example.com", salary: 75000 }, { id: 102, name: "Jane Smith", age: 28, gender: "Female", department: "Marketing", email: "jane.smith@example.com", salary: 68000 }, { id: 103, name: "Sam Johnson", age: 35, gender: "Male", department: "Sales", email: "sam.johnson@example.com", salary: 72000 }, { id: 104, name: "Alice Brown", age: 40, gender: "Female", department: "HR", email: "alice.brown@example.com", salary: 69000 }, { id: 105, name: "Michael Green", age: 25, gender: "Male", department: "Finance", email: "michael.green@example.com", salary: 64000 }, { id: 106, name: "Emma White", age: 32, gender: "Female", department: "Engineering", email: "emma.white@example.com", salary: 73000 }, { id: 107, name: "David Black", age: 29, gender: "Male", department: "IT", email: "david.black@example.com", salary: 71000 }, { id: 108, name: "Olivia Blue", age: 27, gender: "Female", department: "Operations", email: "olivia.blue@example.com", salary: 66000 }, { id: 109, name: "James Red", age: 33, gender: "Male", department: "Support", email: "james.red@example.com", salary: 68000 }, { id: 110, name: "Sophia Grey", age: 38, gender: "Female", department: "Admin", email: "sophia.grey@example.com", salary: 70000 }])
+                return(
+                    <>
+                    {employe.map((a)=><div class='d1' style={a.gender=='Male'?{backgroundColor:'lightblue',border:'3px solid blue'}:{backgroundColor:'lightpink',border:'3px solid red'}}>
+                        <h1>Name:{a.name}</h1>
+                        <h1>Id:{a.id}</h1>
+                        <h1>Department:{a.department}</h1>
+                        <h1>Salary:{a.salary}</h1>
+                        <h1>Age:{a.age}</h1>
+                        <h1>Gender:{a.gender}</h1>
+                        </div>)}
+                    </>
+                )
+            }
+            ReactDOM.render(<Employee/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

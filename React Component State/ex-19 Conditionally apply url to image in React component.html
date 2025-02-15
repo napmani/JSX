@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Conditionally apply url to image in React component.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Displayimgurl(){
+                var [a,setA]=React.useState(+prompt())
+                var [x,setX]=React.useState('https://th.bing.com/th/id/OIP.PFCH_CDdJ11zSzGIouHr4wHaEF?w=298&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7')
+                var [y,setY]=React.useState('https://th.bing.com/th/id/OIP.38hI-NBpOWcN8RCAk052EgHaEK?w=320&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7')
+                return(
+                    <img src={a%2==0?x:y} />
+                )
+            }
+            ReactDOM.render(<Displayimgurl/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

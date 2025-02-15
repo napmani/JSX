@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Display respective image on radio button value in React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            img{
+                height: 150px;
+                width: 250px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Radioimg(){
+                function photo(e){
+                    document.getElementById('i1').src=e.target.value
+                }
+                return(
+                    <>
+                    <input type="radio" name="images" value="https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg" onChange={photo}/>Male
+                    <br/>
+                    <input type="radio" name="images" value="https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png" onChange={photo}/>Female
+                    <div><img src="https://th.bing.com/th/id/R.f953f3fe8474e40d9635519b1cf7c1f6?rik=P9Qy0y1KqY2OMw&riu=http%3a%2f%2fwww.publicdomainpictures.net%2fpictures%2f150000%2fvelka%2fwhite-background-14532158163GC.jpg&ehk=02auqxmsmEUs3xYvBGwufRpWVkuXYiQgRvgzJLXEA6s%3d&risl=&pid=ImgRaw&r=0"  alt='image'id="i1"/></div>
+                    </>
+                )
+            }
+            ReactDOM.render(<Radioimg/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

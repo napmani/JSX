@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Display different images conditionally React component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Displayimg(){
+                var [x,setX]=React.useState(+prompt())
+                return(
+                    <div>{x%2==0?(<img src='https://th.bing.com/th/id/OIP.VQMw_RifqQh31M6NZrs1aAHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.5&pid=1.7'/>):(<img src='https://th.bing.com/th/id/OIP.ijUc-afaZtdY2zWooJADWAHaER?w=277&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'/>)}</div>
+                )
+            }
+            ReactDOM.render(<Displayimg/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

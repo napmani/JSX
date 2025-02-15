@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Apply the border width with variable value to JSX h1.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var c=12;
+            var hedb= <h1 style={{border:`${c}px solid`}}>Hello Edupoly</h1>
+            ReactDOM.render(hedb,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

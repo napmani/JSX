@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Generate galleries using in React component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        img{
+            height: 100px;
+            width: 150px;
+            margin: 5px;
+        }
+        #d1{
+            padding: 10px;
+            background-color: brown;
+        }
+        #d2{
+            background-color: rgb(136, 136, 242);
+        }
+        #d3{
+            background-color: orange;
+        }
+    </style>
+    <body id="b1">
+        <script type="text/babel">
+            function Gallarys(){
+                var [x,setX]=React.useState([['https://static2.cbrimages.com/wordpress/wp-content/uploads/2020/08/big-mom-crocodile-doflamingo-one-piece.jpg','https://th.bing.com/th/id/OIP.sS0Yrfh7cAlDnNUGjl3rhAHaEK?w=319&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7','https://th.bing.com/th/id/OIP.6RZI59oVcvlLfq7XxEWxjwHaEK?w=296&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7','https://th.bing.com/th/id/OIP.q67On4Ax2wwpnlIkG0JeGAHaEK?w=295&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7','https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/10/blackbeard-big-mom-featured.jpg','https://i.ytimg.com/vi/CF8Ijlv5q2s/maxresdefault.jpg'],['https://th.bing.com/th/id/OIP.q8NZQtRGQ83eTgvUHg1AMAHaDO?w=349&h=152&c=7&r=0&o=5&dpr=1.5&pid=1.7','https://th.bing.com/th/id/OIP.grVT7GpSe6GV3zc0DR_n9wHaEK?w=307&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7','https://th.bing.com/th/id/OIP.M38rqNnBjkZlBchHjhUnOQHaEI?rs=1&pid=ImgDetMain','https://th.bing.com/th/id/OIP.3Ibc73WauUTKtQAY4xGuxAHaD5?w=274&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7','https://th.bing.com/th/id/OIP.GvxjlcDHZbL6oAMpMHvFZwHaDt?w=293&h=175&c=7&r=0&o=5&dpr=1.5&pid=1.7','https://th.bing.com/th/id/OIP.iLWGrME3VC4sdARiDXL5AwHaEK?w=317&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7']])
+                return(
+                    <div id='d1'><h1>Anime Villans</h1>
+                        <div id='d2'><h1>One Piece Villans</h1>
+                            {x[0].map((a)=><img src={a}/>)}</div>
+                            <div id='d3'><h1>Naruto Villans</h1>
+                                {x[1].map((b)=><img src={b}/>)}</div>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Gallarys/>,document.getElementById('b1'))
+        </script>
+    </body>
+    </head>
+</html>

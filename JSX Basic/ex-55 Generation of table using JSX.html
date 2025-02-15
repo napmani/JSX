@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Generation of table using JSX.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var people = [
+               { firstname: "John", lastname: "Doe", age: 28, gender: "male" },
+               { firstname: "Jane", lastname: "Smith", age: 34, gender: "female" },
+               { firstname: "Mike", lastname: "Johnson", age: 45, gender: "male" },
+               { firstname: "Emily", lastname: "Davis", age: 23, gender: "female" },
+               { firstname: "David", lastname: "Wilson", age: 38, gender: "male" }
+            ];
+            var tab= <table border='2px'>
+                <thead>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Gender</th>   
+                    </thead>
+                <tbody>{people.map((a)=><tr>
+                    <td>{a['firstname']}</td>
+                    <td>{a['lastname']}</td>
+                    <td>{a['age']}</td>
+                    <td>{a['gender']}</td>
+                    </tr>)}</tbody>
+                </table>
+                ReactDOM.render(tab,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

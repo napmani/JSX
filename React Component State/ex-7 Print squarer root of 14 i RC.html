@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>print sqrt of 14 in RC.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+           function Sqrt(){
+            var [x,setX]=React.useState(14)
+            return(
+                <h1>{Math.sqrt(x)}</h1>
+            )
+           }
+           ReactDOM.render(<Sqrt/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

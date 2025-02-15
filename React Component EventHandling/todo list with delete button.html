@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>todo list with delete button.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            button{
+                color: blue;
+                background-color: black;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Studentlist(){
+                var [student,setStudent]=React.useState(['mani','anil','sai'])
+                function addstudent(){
+                    var s=document.getElementById('i1').value
+                    setStudent([...student,s])
+                    document.getElementById('i1').value=''
+                }
+                function deletestudent(index){
+                    var temp=[...student]
+                    temp.splice(index,1)
+                    setStudent([...temp])
+                }
+                return(
+                   <> <input type="text" id='i1' placeholder='Enter Student Name'/>
+                    <button onClick={()=>{addstudent()}}>Add Student</button>
+                    <ul>
+                        {student.map((a,i)=><li>{a}<button onClick={()=>{deletestudent(i)}}>Delete</button></li>)}</ul>
+                    </>
+                )
+            }
+            ReactDOM.render(<Studentlist/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

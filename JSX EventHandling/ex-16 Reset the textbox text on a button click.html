@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Reset the textbox text on a button click</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function men(){
+                document.getElementById('h1').innerText=document.getElementById('i1').value
+            }
+            function fun(){
+                document.getElementById('i1').value=null
+                document.getElementById('h1').innerText=null
+            }
+            var tbs= <div><input type="text" onKeyUp={men} id='i1'/> <h1 id='h1'></h1> <button onClick={fun}>Reset</button></div>
+            ReactDOM.render(tbs,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

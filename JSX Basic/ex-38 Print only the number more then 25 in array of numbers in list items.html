@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print only the numbers more then 25 in an array of numbers in list items.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=[11,23,25,66,77,889,1,29,3,4,41,55,6,6,7,8989,25]
+            var mn= <ul>{ar.map(function(a){
+                return (a>25?<li>{a}</li>:null)
+            })}</ul>
+            ReactDOM.render(mn,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

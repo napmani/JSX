@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                background-color: aquamarine;
+                padding: 10px;
+            }
+            #d2{
+                background-color: brown;
+                margin: 10px;
+            }
+            img{
+                height: 100px;
+                width: 130px;
+                margin: 10px;
+            }
+        </style>
+        <title>Generate gallery for the given array of image urls.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+             var ar=['https://th.bing.com/th/id/OIP.euRUWjFBq2pMzDbaPOYeEQHaMz?pid=ImgDet&w=190&h=329&c=7&dpr=1.5',
+                'https://th.bing.com/th/id/OIP.tPt-yHlpbainiR-PwGFbCQHaNq?pid=ImgDet&w=184&h=340&c=7&dpr=1.5',
+                'https://th.bing.com/th/id/OIP.im0T4Pn8e0qs6ZJVcxQxpAHaL6?pid=ImgDet&w=197&h=317&c=7&dpr=1.5',
+                'https://th.bing.com/th/id/OIP.WMRa-egV0WMbkPEO1zrI1gHaNK?pid=ImgDet&w=187&h=333&c=7&dpr=1.5',
+                'https://th.bing.com/th/id/OIP.Rvez74OJRX9KndH6d6oNOgHaNF?pid=ImgDet&w=188&h=332&c=7&dpr=1.5'
+            ]
+            var galary= <div id='d1'>
+                <h1>MOnky D Luffy</h1>
+                <div id='d2'>{ar.map((a)=><img src={a}/>)}</div>
+                </div>
+                ReactDOM.render(galary,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

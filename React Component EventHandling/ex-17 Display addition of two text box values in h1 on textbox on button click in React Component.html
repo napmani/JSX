@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Display addition of two text box values in h1 on textbox on button
+            click in React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            input{
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Addition(){
+                var [x,setX]=React.useState()
+                var [y,setY]=React.useState()
+                var [z,setZ]=React.useState()
+                function add(){
+                    setZ(x+y)
+                }
+                return(<>
+                <input type="text" id='i1' onChange={(e)=>{setX(+e.target.value)}}/>
+                <i id='i3'><b>+</b></i>
+                <input type="text" id='i2' onChange={(e)=>{setY(+e.target.value)}}/>
+                <br/>
+                <button onClick={add}>Add</button>
+                <h1>{z}</h1>
+                </>)
+            }
+            ReactDOM.render(<Addition/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

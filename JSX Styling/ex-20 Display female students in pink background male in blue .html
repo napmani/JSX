@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Display female students in pink background male in blue
+        </title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+             var students = [
+                { firstname: "Alice", lastname: "Brown", age: 20, gender: "female", class: "10th class" },
+                { firstname: "Bob", lastname: "Smith", age: 22, gender: "male", class: "12th class" },
+                { firstname: "Cathy", lastname: "Johnson", age: 19, gender: "female", class: "11th class" },
+                { firstname: "David", lastname: "Wilson", age: 21, gender: "male", class: "10th class" },
+                { firstname: "Eva", lastname: "Davis", age: 23, gender: "female", class: "12th class" }
+            ];
+            var tab= <table border='2px'>{students.map((a)=><tr style={a['gender']=='male'?null:{backgroundColor:'pink'}}>
+                <td>Name:{a['firstname']+a['lastname']}</td>
+                <td>Class:{a['class']}</td>
+                <td>Age:{a['age']}</td>
+                <td>Gender:{a['gender']}</td>
+                </tr>)}</table>
+                ReactDOM.render(tab,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

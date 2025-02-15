@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Display select box value in h1</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function man(e){
+                document.getElementById('h1').innerText=e.target.value
+            }
+            var dsbv= <div>
+                <select onChange={man}>
+                <option value="UNITED STATES OF AMERICA">USA</option>
+                <option value="SRI LANKA">SL</option>
+                <option value="INDIA">IND</option>
+            </select>
+            <h1 id='h1'></h1>
+            </div>  
+            ReactDOM.render(dsbv,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

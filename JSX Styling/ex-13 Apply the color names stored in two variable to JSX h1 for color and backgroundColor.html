@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Apply the color names stored in two variable to JSX h1 for color
+            and backgroundColor
+        </title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var a='red';
+            var b='green';
+            var hedc= <h1 style={{color:a,backgroundColor:b}}>Hello Mani</h1>
+            ReactDOM.render(hedc,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

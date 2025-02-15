@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Display each array object in flex boxes with respective gender
+            images in React Component</title>
+            <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            .d1{
+                display: flex;
+                flex-direction: row;
+            }
+            .d2{
+                height: 550px;
+                padding: 20px;
+                margin: 15px;
+                width: 1000px;
+            }
+            img{
+                height: 100px;
+                width: 150;
+                border-radius: 50%;
+                margin-left: 120px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Empimg(){
+                var [employe,setEmploye]=React.useState([ { id: 101, name: "John Doe", age: 30, gender: "Male", department: "Engineering", email: "john.doe@example.com", salary: 75000 }, { id: 102, name: "Jane Smith", age: 28, gender: "Female", department: "Marketing", email: "jane.smith@example.com", salary: 68000 }, { id: 103, name: "Sam Johnson", age: 35, gender: "Male", department: "Sales", email: "sam.johnson@example.com", salary: 72000 }, { id: 104, name: "Alice Brown", age: 40, gender: "Female", department: "HR", email: "alice.brown@example.com", salary: 69000 }, { id: 105, name: "Michael Green", age: 25, gender: "Male", department: "Finance", email: "michael.green@example.com", salary: 64000 }, { id: 106, name: "Emma White", age: 32, gender: "Female", department: "Engineering", email: "emma.white@example.com", salary: 73000 }, { id: 107, name: "David Black", age: 29, gender: "Male", department: "IT", email: "david.black@example.com", salary: 71000 }, { id: 108, name: "Olivia Blue", age: 27, gender: "Female", department: "Operations", email: "olivia.blue@example.com", salary: 66000 }, { id: 109, name: "James Red", age: 33, gender: "Male", department: "Support", email: "james.red@example.com", salary: 68000 }, { id: 110, name: "Sophia Grey", age: 38, gender: "Female", department: "Admin", email: "sophia.grey@example.com", salary: 70000 }])
+                var [x,setX]=React.useState('https://th.bing.com/th?id=OIP.hC93TXf7tKDDX4AAewpN6QHaHa&w=250&h=250&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.5&pid=3.1&rm=2')
+                var [y,setY]=React.useState('https://th.bing.com/th?id=OIP.6YowlFpO1m1zJXhFVRkQEAHaHa&w=250&h=250&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.5&pid=3.1&rm=2')
+                return(
+                    <div class='d1'>
+                        {employe.map((a)=><div class='d2' style={a.gender=='Male'?{backgroundColor:'lightblue',border:'3px solid blue'}:{backgroundColor:'pink',border:'3px solid red'}}>
+                            <img src={a.gender=="Male"?x:y}/>
+                            <h1>Nmae:{a.name}</h1>
+                            <h1>Id:{a.id}</h1>
+                            <h1>Department:{a.department}</h1>
+                            <h1>Salary:{a.salary}</h1>
+                            <h1>Age:{a.age}</h1>
+                            <h1>Gender:{a.gender}</h1>
+                            <h1>E-mail:{a.email}</h1>
+                            </div>)}
+                        </div>
+                )
+            }
+            ReactDOM.render(<Empimg/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

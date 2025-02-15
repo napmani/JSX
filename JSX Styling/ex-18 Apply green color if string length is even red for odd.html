@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Apply green color if string length is even red for odd.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+       <script type="text/babel">
+        var ar=['mani','nani','sai','praveen','seven','anil','subbu']
+        var arl=<div>{ar.map((a)=><h1 style={a.length%2==0?{color:'green'}:{color:'red'}}>{a}</h1>)}</div>
+        ReactDOM.render(arl,document.getElementById('b1'))
+       </script>
+    </body>
+</html>

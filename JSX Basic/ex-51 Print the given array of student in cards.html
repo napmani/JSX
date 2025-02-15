@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            div{
+                height: 150px;
+                width: 250px;
+                background-color: brown;
+                padding: 10px;
+                margin: 5px;
+                border: 1px solid black;
+            }
+        </style>
+        <title>Print the given array of students in cards.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+         var students = [
+            { firstname: "Alice", lastname: "Brown", age: 20, gender: "female", class: "10th class" },
+            { firstname: "Bob", lastname: "Smith", age: 22, gender: "male", class: "12th class" },
+            { firstname: "Cathy", lastname: "Johnson", age: 19, gender: "female", class: "11th class" },
+            { firstname: "David", lastname: "Wilson", age: 21, gender: "male", class: "10th class" },
+            { firstname: "Eva", lastname: "Davis", age: 23, gender: "female", class: "12th class" }
+            ];
+            var cards=<>{students.map((a)=><div>
+                <h4>Name:{a['firstname']+a['lastname']}</h4>
+                <h4>Class:{a['class']}</h4>
+                <h4>Age:{a['age']}</h4>
+                <h4>Gender:{a['gender']}</h4>
+                </div>)}</>
+                ReactDOM.render(cards,document.getElementById('b1'))
+            </script>
+    </body>
+</html>

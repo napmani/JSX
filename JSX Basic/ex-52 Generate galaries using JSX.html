@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Generate galaries using JSX</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            #d1{
+                background-color: rgb(10, 240, 240);
+                padding: 10px;
+            }
+            img{
+                width: 100px;
+                height: 70px;
+                margin: 5px;
+            }
+            #d2,#d3{
+                margin: 10px;
+                background-color: brown;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=['https://th.bing.com/th/id/OIP.euRUWjFBq2pMzDbaPOYeEQHaMz?pid=ImgDet&w=190&h=329&c=7&dpr=1.5',
+                'https://th.bing.com/th/id/OIP.tPt-yHlpbainiR-PwGFbCQHaNq?pid=ImgDet&w=184&h=340&c=7&dpr=1.5',
+                'https://th.bing.com/th/id/OIP.im0T4Pn8e0qs6ZJVcxQxpAHaL6?pid=ImgDet&w=197&h=317&c=7&dpr=1.5',
+                'https://th.bing.com/th/id/OIP.WMRa-egV0WMbkPEO1zrI1gHaNK?pid=ImgDet&w=187&h=333&c=7&dpr=1.5',
+                'https://th.bing.com/th/id/OIP.Rvez74OJRX9KndH6d6oNOgHaNF?pid=ImgDet&w=188&h=332&c=7&dpr=1.5'
+            ]
+            var br=[
+            'https://www.pngitem.com/pimgs/m/392-3922511_anime-boy-png-naruto-with-white-background-transparent.png',
+            'https://i.pinimg.com/736x/5c/68/9f/5c689f219d2fdaa675fbe53ff8644560.jpg',
+            'https://i1.wp.com/www.kindpng.com/picc/m/188-1884555_naruto-shippuden-png-transparent-image-full-body-naruto.png',
+            'https://th.bing.com/th/id/OIP.nEOCV3YumEutTsaYM4DjqAHaO2?w=820&h=1645&rs=1&pid=ImgDetMain',
+            'https://th.bing.com/th/id/OIP.7ACZoJVVARAtDR-7UWnx9wHaLz?pid=ImgDet&w=198&h=316&c=7&dpr=1.5']
+            var gar= <div id="d1">
+                <h1>Anime</h1>
+                <div id='d2'> <h1>Luffy</h1>
+                    {ar.map((a)=><img src={a}/>
+                )}</div>
+                <div id='d3'> <h1>Naruto</h1>
+                    {br.map((b)=><img src={b}/>
+                )}</div>
+                </div>
+                ReactDOM.render(gar,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

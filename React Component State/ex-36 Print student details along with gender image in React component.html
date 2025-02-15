@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Print student details along with gender image in React component.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            img{
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Tablewithimg(){
+            var [x,setX]=React.useState([
+        {
+          firstname:"Praveen",
+          lastname:"Gubbala",
+          age:40,
+          gender:"male"
+        },
+        {
+          firstname:"Smrithi",
+          lastname:"mandana",
+          age:25,
+          gender:'female'
+        },
+        {
+          firstname:"mithali",
+          lastname:"raj",
+          age:39,
+          gender:'female'
+        },
+        {
+          firstname:"Rohit",
+          lastname:"Sharma",
+          age:35,
+          gender:'male'
+        },
+        {
+          firstname:"Sachin",
+          lastname:"Tendulkar",
+          age:50,
+          gender:'male'
+        },
+    ])
+    return(
+        <table border='2px'><tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Photo</th>
+            </tr>
+            {x.map((a)=><tr>
+                <td>{a.firstname}</td>
+                <td>{a.lastname}</td>
+                <td>{a.age}</td>
+                <td>{a.gender}</td>
+                <td><img src={a.gender=='male'?'https://th.bing.com/th?id=OIP.p5aepZh8OpbpDE8YlmVtWgHaHa&w=250&h=250&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.5&pid=3.1&rm=2':'https://th.bing.com/th/id/OIP.WpnGIPj1DKAGo-CP64znTwHaHa?rs=1&pid=ImgDetMain'}/></td>
+                </tr>)}
+            </table>
+    )
+            }
+            ReactDOM.render(<Tablewithimg/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Print merged array values in sorted order of given two arrays in React component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Sort(){
+                var [x,setX]=React.useState([1,2,34,4,567,12,567,876,456])
+                var [y,setY]=React.useState([10,9,8,7,23456,56789876543])
+                return(
+                    <ul>{x.concat(y).sort((a,b)=>a-b).map((a)=><li>{a}</li>)}</ul>
+                )
+            }
+            ReactDOM.render(<Sort/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

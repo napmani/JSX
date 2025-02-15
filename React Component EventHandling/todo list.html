@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>todo list</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            button{
+                margin: 5px;
+                color: aquamarine;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+           function Studentslist(){
+            var [students,setStudents]=React.useState(['mani','sai','anil','prasad'])
+            function add(){
+                var s=document.getElementById('i1').value
+                setStudents([...students,s])
+                document.getElementById('i1').value=''
+            }
+            return(
+                <div>
+                    <input type="text" name="" id="i1" placeholder='Enter Student Name'/>
+                    <button onClick={function(){
+                        add();
+                    }}>Add Student</button>
+                    <div>
+                        <ul>{students.map((a)=><li>{a.toUpperCase()}</li>)}</ul>
+                        </div>
+                    </div>
+            )
+           }
+           ReactDOM.render(<Studentslist/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Display each array objext in flex boxes.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var students = [
+                { firstname: "Alice", lastname: "Brown", age: 20, gender: "female", class: "10th class" },
+                { firstname: "Bob", lastname: "Smith", age: 22, gender: "male", class: "12th class" },
+                { firstname: "Cathy", lastname: "Johnson", age: 19, gender: "female", class: "11th class" },
+                { firstname: "David", lastname: "Wilson", age: 21, gender: "male", class: "10th class" },
+                { firstname: "Eva", lastname: "Davis", age: 23, gender: "female", class: "12th class" }
+                ];
+            var arfb= <div style={{display:'flex'}}>{students.map((a)=><div style={{border:'3px solid black',backgroundColor:'skyblue',margin:'10px',padding:'10px'}}>
+                <h1>Name:{a['firstname']+a['lastname']}</h1>
+                <h1>Class:{a['class']}</h1>
+                <h1>Age:{a['age']}</h1>
+                <h1>Gender:{a['gender']}</h1>
+                </div>)}</div>
+                ReactDOM.render(arfb,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

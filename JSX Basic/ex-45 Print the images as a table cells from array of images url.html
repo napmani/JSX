@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Print the images as a table cells from array of images url.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=['https://th.bing.com/th/id/OIP.NRnPiho_TPy9VLNjIIsS5gHaKM?pid=ImgDet&w=178&h=244&c=7&dpr=1.5',
+            'https://th.bing.com/th/id/OIP.CAQPfUE1ic4ZwsOTjJ5PaQHaKi?pid=ImgDet&w=178&h=252&c=7&dpr=1.5',
+        'https://th.bing.com/th/id/OIP.u-scvrxUT5B5zVA75sH5zgHaKL?pid=ImgDet&w=178&h=244&c=7&dpr=1.5']
+       
+        var it= <table border="2px">
+            <tr>{ar.map(function(a){
+                return <td><img src={a}/></td>
+            })}</tr>
+            <tr>{ar.map(function(b){
+                return <td><img src={b}/></td>
+            })}</tr>
+            <tr>{ar.map(function(c){
+                return <td><img src={c}/></td>
+            })}</tr></table>
+            ReactDOM.render(it,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

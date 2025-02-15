@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print only numbers less then 25 in an array in list items.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=[1,2,3,41,5,61,7,8,,99,33,26]
+            var ln= <ul>{ar.map(function(a){
+                return (a<25?<li>{a}</li>:null)
+            })}</ul>
+            ReactDOM.render(ln,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

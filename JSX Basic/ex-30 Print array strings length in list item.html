@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print array string leanth in list item</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=['mani','anilkumar','prasad','sai','vijju']
+            var asl= <div>{ar.map(function(a){
+                return <li>{a.length}</li>
+            })}</div>
+            ReactDOM.render(asl,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

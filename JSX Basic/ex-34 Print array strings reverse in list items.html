@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print array strings reverse in list items.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=['mani','anil','sai','nani','praveen']
+            var ras=<ul>{ar.map(function(a){
+                return <li>{a.split("").reverse().join('')}</li>
+            })}</ul>
+            ReactDOM.render(ras,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

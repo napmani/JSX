@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Print flatten array of Multi-dimensional array in React component.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Flattenarray(){
+                var [x,setX]=React.useState([1,2,[3,1,23,45,5,[123,34,5654,76,67,[234,754356,5655,244],3456,455633,56],234,555,33],2345,456,32247,23])
+                return(
+                    <ul>{x.flat(3).map((a)=><li>{a}</li>)}</ul>
+                )
+            }
+            ReactDOM.render(<Flattenarray/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Display even array value in green and odd in red list items in
+            React Component</title>
+            <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+            <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Evenodd(){
+            var [x,setX]=React.useState([2,3,4,5,6,7,8,9,9,1,4,6,8,7])
+            return(
+                <ul>
+                    {x.map((a)=><li style={a%2==0?{color:'green'}:{color:'red'}}>{a}</li>)}</ul>
+            )
+            }
+            ReactDOM.render(<Evenodd/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

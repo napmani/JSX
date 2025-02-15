@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Print array values in sorted order in list item in JSX.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var ar=[1,4,5,3,2,7,11,21,99,11,90,89]
+            var sa=<ul>{ar.sort(function(a,b){
+                return a-b;
+            }).map(function(a){
+                return <li>{a}</li>
+            })}</ul>
+            ReactDOM.render(sa,document.getElementById('d1'))
+        </script>
+    </body>
+</html>

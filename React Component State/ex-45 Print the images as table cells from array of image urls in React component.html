@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Print the images as table cells from array of image urls in React component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            img{
+                height: 100px;
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Tableofimg(){
+            var [x,setX]=React.useState([{naruto:'https://th.bing.com/th?id=OIP.7l1RcKdu8mT1N0hVtoltQQHaEU&w=327&h=190&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.5&pid=3.1&rm=2',
+                onepiece:'https://th.bing.com/th/id/OIP.ovUgIeJw678wTSNbbZ65BgHaEo?w=316&h=197&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                aot:'https://th.bing.com/th/id/OIP.GIe09htrYXTKYSZ3sB998gHaEK?w=292&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'
+            },
+            {
+                naruto:'https://th.bing.com/th/id/OIP.fqs4i4bIJuN_A70LEq0kIgHaE3?w=264&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                onepiece:'https://th.bing.com/th/id/OIP.0gZTZuVjI87P4Sb0H1pbvwHaEK?w=314&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                aot:'https://th.bing.com/th/id/OIP.s1DjtScVwoSoEQbPY3A0aQHaEK?w=281&h=184&c=7&r=0&o=5&dpr=1.5&pid=1.7'
+            },
+            {
+                naruto:'https://th.bing.com/th/id/OIP._ImEZITVrA_-QUlDR-SRYQHaFk?w=203&h=182&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                onepiece:'https://th.bing.com/th/id/OIP.YXYMH1lyddxDAhtDDMpLbQHaF4?pid=ImgDet&w=189&h=150&c=7&dpr=1.5',
+                aot:'https://th.bing.com/th/id/OIP.zWv58TNAQ_xFikCb15ufEwHaEK?w=293&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'
+            },
+            {
+                naruto:'https://th.bing.com/th/id/OIP.a8yBzZgUvYOnn3X33iPF2AHaEL?w=259&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+                onepiece:'https://th.bing.com/th/id/OIP.To-T5YMSnA4PWg2yVo3ZAgHaJP?pid=ImgDet&w=189&h=235&c=7&dpr=1.5',
+                aot:'https://th.bing.com/th/id/OIP.6FcCKLg-astSqbKI6nd8ZAHaEK?w=317&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'
+            }])
+            return(
+                <table border='2px'><tr>
+                    <th>Naruro</th>
+                    <th>One Piece</th>
+                    <th>Attack on Titan</th>
+                    </tr>
+                    {x.map((a)=><tr>
+                        <td><img src={a.naruto}/></td>
+                        <td><img src={a.onepiece}/></td>
+                        <td><img src={a.aot}/></td>
+                        </tr>)}
+                    </table>
+            )
+        }
+        ReactDOM.render(<Tableofimg/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

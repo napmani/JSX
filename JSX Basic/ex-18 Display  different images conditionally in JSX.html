@@ -1,0 +1,36 @@
+<!-- <html>
+    <head>
+        <title>Display img conditionally in JSX</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var a=+prompt();
+            var dic= <div>{(a%2==0)?(<img src="https://th.bing.com/th/id/OIP.FbrvWz2I1smta5YRNB6F0QHaGB?w=255&h=207&c=7&r=0&o=5&dpr=1.5&pid=1.7"></img>):(<img src="https://th.bing.com/th?q=Toji+Fushiguro+4K&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247"></img>)}</div>
+            ReactDOM.render(dic,document.getElementById('d1'))
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>Display img conditionally in JSX</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var a=+prompt();
+            var dic= <div>
+                {(a%2==0)&& <img src="https://th.bing.com/th?q=Toji+Background+4K&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247"></img>}
+                {(a%2!=0)&& <img src="https://th.bing.com/th/id/OIP.cnpGq-LdvP4HfeYdPxaojQHaEK?w=314&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"></img>}
+                </div>
+            ReactDOM.render(dic,document.getElementById('d1'))    
+        </script>
+    </body>
+</html>

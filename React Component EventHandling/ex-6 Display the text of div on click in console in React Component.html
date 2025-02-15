@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Display the text of div on click in console in React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function concon(){
+                console.log(document.getElementById('d1').innerText)
+            }
+            function Displaytext(){
+                return(
+                    <div id='d1' style={{border:'3px solid red',padding:'10px',margin:'10px'}} onClick={concon}>Manikanta Ballina</div>
+                )
+            }
+            ReactDOM.render(<Displaytext/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

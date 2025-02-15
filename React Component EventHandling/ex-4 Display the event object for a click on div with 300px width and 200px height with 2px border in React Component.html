@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Display the event object for a click on div with 300px width and 200pxheight with 2px border in React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function cone(e){
+               console.log(e) 
+            }
+            function Divonclick(){
+                return(
+                    <div style={{height:'200px',width:'300px',border:'2px solid black'}} onClick={cone}>Click me anywhere</div>
+                )
+            }
+            ReactDOM.render(<Divonclick/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

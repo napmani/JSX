@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Display radio button value on check in React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Radiobutton(){
+                function rad(e){
+                    document.getElementById('h1').innerText=e.target.value
+                }
+                return(
+                    <>
+                    <input type="radio" name="countrys" value='INDIA' onChange={rad}/>IND
+                    <br/>
+                    <input type="radio" name="countrys" value='UNITED STATES OF AMERICA' onChange={rad}/>USA
+                    <h1 id='h1'></h1>
+                    </>
+                )
+            }
+            ReactDOM.render(<Radiobutton/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

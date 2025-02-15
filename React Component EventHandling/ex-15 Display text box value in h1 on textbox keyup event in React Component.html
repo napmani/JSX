@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Display text box value in h1 on textbox keyup event in
+            React Component</title>
+            <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Distbvih1(){
+                function fun1(){
+                    document.getElementById('h1').innerText=document.getElementById('i1').value
+                }
+                return(
+                    <>
+                    <input type="text" onKeyUp={fun1} id='i1'/>
+                    <h1 id='h1'></h1>
+                    </>
+                )
+            }
+            ReactDOM.render(<Distbvih1/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

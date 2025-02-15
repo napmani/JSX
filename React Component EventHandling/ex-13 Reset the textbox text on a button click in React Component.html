@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Reset the textbox text on a button click in React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            button{
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Resettb(){
+                function reset(){
+                    document.getElementById('i1').value=''
+                }
+                return(
+                    <>
+                    <input type="text" id='i1'/>
+                    <br/>
+                    <button onClick={reset}>Clear Text</button>
+                    </>
+                )
+            }
+            ReactDOM.render(<Resettb/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

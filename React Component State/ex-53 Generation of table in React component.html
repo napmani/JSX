@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Generation of table in React component.</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Generatetable(){
+            var [x,setX]=React.useState([
+                {
+                    firstname:'praveen',
+                    lastname:'gubbala',
+                    age:38
+                },
+                {
+                    firstname:'anupama',
+                    lastname:'reddy',
+                    age:28
+                },
+                {
+                    firstname:'priya',
+                    lastname:'kaman',
+                    age:23
+                },
+                {
+                    firstname:'kiran',
+                    lastname:'rao',
+                    age:25
+                },
+                {
+                    firstname:'triveni',
+                    lastname:'manu',
+                    age:29
+                }
+            ])
+            return(
+                <table border='2px'><tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    </tr>
+                    {x.map((a)=><tr>
+                        <td>{a.firstname}</td>
+                        <td>{a.lastname}</td>
+                        <td>{a.age}</td>
+                        </tr>)}
+                    </table>
+            )
+                }
+                ReactDOM.render(<Generatetable/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title></title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var people = [
+  { firstname: "John", lastname: "Doe", age: 28, gender: "male" },
+  { firstname: "Jane", lastname: "Smith", age: 34, gender: "female" },
+  { firstname: "Mike", lastname: "Johnson", age: 45, gender: "male" },
+  { firstname: "Emily", lastname: "Davis", age: 23, gender: "female" },
+  { firstname: "David", lastname: "Wilson", age: 38, gender: "male" }
+];
+var aol= <div>{people.map(function(a){
+    return <ul>
+        <li>{a.firstname}</li>
+        <li>{a.lastname}</li>
+        <li>{a.age}</li>
+        <li>{a.gender}</li>
+        </ul>
+})}</div>
+ReactDOM.render(aol,document.getElementById('b1'))
+
+        </script>
+    </body>
+</html>

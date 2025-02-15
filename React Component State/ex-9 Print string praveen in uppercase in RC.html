@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Print string praveen in uppercase in RC.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Uppercas(){
+                var [x,setX]=React.useState('praveen')
+                return(
+                    <h1>{x.toUpperCase()}</h1>
+                )
+            }
+            ReactDOM.render(<Uppercas/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

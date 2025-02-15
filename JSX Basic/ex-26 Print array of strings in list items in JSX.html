@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print array of strings in list items in JSX.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=['mani','nani','anil','praveen','subbu']
+            var asil= <ol>{ar.map(function(a){
+                return <li>{a}</li>
+            })}</ol>
+            ReactDOM.render(asil,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

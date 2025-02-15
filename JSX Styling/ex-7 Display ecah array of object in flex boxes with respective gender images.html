@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Display each array object in flex boxes with respective gender images.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var students = [
+                { firstname: "Alice", lastname: "Brown", age: 20, gender: "female", class: "10th class" },
+                { firstname: "Bob", lastname: "Smith", age: 22, gender: "male", class: "12th class" },
+                { firstname: "Cathy", lastname: "Johnson", age: 19, gender: "female", class: "11th class" },
+                { firstname: "David", lastname: "Wilson", age: 21, gender: "male", class: "10th class" },
+                { firstname: "Eva", lastname: "Davis", age: 23, gender: "female", class: "12th class" }
+            ];
+            var aofbi= <div style={{display:'flex'}}>{students.map((a)=><div style={a.gender=="male"?{backgroundColor:"skyblue",border:'2px solid blue',padding:'10px',margin:'10px'}:{backgroundColor:"lightpink",border:'2px solid red',padding:'10px',margin:'10px'} }>
+                <img  style={{ marginLeft:'80px',borderRadius:'50%',width:'100px',width:'80px'}}src={a['gender']=="male"?'https://static.vecteezy.com/system/resources/previews/015/271/968/non_2x/business-man-flat-icon-design-human-resource-and-businessman-icon-concept-man-icon-in-trendy-flat-style-symbol-for-your-web-site-design-logo-app-vector.jpg':'https://images.squarespace-cdn.com/content/v1/5cf9ac4e66ed290001dd424d/1678150519278-YYPZ20JW2S750WN76CCO/user-icon-female-person-symbol-profile-avatar-vector-20787319.jpg'}/>
+                <h1>Name:{a['firstname']+a['lastname']}</h1>
+                <h1>Class:{a['class']}</h1>
+                <h1>Age:{a['age']}</h1>
+                <h1>Gender:{a['gender']}</h1>
+                </div>)}</div>
+                ReactDOM.render(aofbi,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

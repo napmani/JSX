@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Print a student details align with gender image</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+const people = [
+  { firstname: "John", lastname: "Doe", age: 28, gender: "male" },
+  { firstname: "Jane", lastname: "Smith", age: 34, gender: "female" },
+  { firstname: "Mike", lastname: "Johnson", age: 45, gender: "male" },
+  { firstname: "Emily", lastname: "Davis", age: 23, gender: "female" },
+  { firstname: "David", lastname: "Wilson", age: 38, gender: "male" }
+];
+ var tab= <table border="2px">{people.map(function(a){
+    return <tr>
+        <td>{a["gender"]=='male'?<img src="https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg" width='100px'/>:<img src='https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png' width='100px'/>}</td>
+        <td>{a["firstname"]}</td>
+        <td>{a["lastname"]}</td>
+        <td>{a["age"]}</td>
+        <td>{[a["gender"]]}</td>
+        </tr>
+ })}</table>
+ ReactDOM.render(tab,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

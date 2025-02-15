@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Display select box value in console.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function man(e){
+                document.getElementById('h1').innerText=e.target.value
+            }
+            var cbv= <div>
+                <input type="checkbox" value='html' onChange={man}/>HTML <br/>
+                <input type="checkbox" value='css' onChange={man}/>CSS <br/>
+                <input type="checkbox" value='js' onChange={man}/>JAVA SCRIPT <br/>
+                <input type="checkbox" value='jsx' onChange={man}/>JSX<br/>
+                <input type="checkbox" value='React js' onChange={man}/>REACT JS <br/>
+                <h1 id='h1'></h1>
+                </div>
+        ReactDOM.render(cbv,document.getElementById('b1'))        
+        </script>
+    </body>
+</html>

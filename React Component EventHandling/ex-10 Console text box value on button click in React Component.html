@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Console text box value on button click in React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function con(){
+                console.log(document.getElementById('i1').value)
+            }
+            function Textbox(){
+                return(
+                    <div>
+                        <input type="text" id='i1'/><br/>
+                        <button style={{margin:'5px'}} onClick={con}>Enter</button>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Textbox/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

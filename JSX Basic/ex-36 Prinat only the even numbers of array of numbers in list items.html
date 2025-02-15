@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print inly the even numbers of array of numvers in list items.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=[1,2,3,45,6,7,8,8,7,2,45,345,6,,123,4]
+            var en= <div>{ar.map((a)=>{
+                return (a%2==0?<li>{a}</li>:null)
+            })}</div>
+            ReactDOM.render(en,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

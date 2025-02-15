@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>like dislike application.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            button{
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Likedislike(){
+                var [l,setL]=React.useState(0)
+                var [dl,setDl]=React.useState(0)
+                function like(){
+                    setL(l+1)
+                }
+                function dislike(){
+                    setDl(dl+1)
+                }
+                return(
+                    <div>
+                        <h1>Like:{l}</h1>
+                        <h1>Dislike:{dl}</h1>
+                        <button onClick={like}>Like</button>
+                        <button onClick={dislike}>Dislike</button>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Likedislike/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

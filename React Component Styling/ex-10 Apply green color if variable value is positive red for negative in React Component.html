@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Apply green color if variable value is positive red for negative in
+            React Component
+            </title>
+            <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+            <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Positivenegative(){
+                var [x,setX]=React.useState(+prompt())
+                return(
+                    <h1 style={x>0?{color:'green'}:{color:'red'}}>{x}</h1>
+                )
+            }
+            ReactDOM.render(<Positivenegative/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

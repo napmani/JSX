@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Print reverse of string praveen in React component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Reverse(){
+                var [x,setX]=React.useState('praveen')
+                return(
+                    <h1>{x.split('').reverse().join('')}</h1>
+                )
+            }
+            ReactDOM.render(<Reverse/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

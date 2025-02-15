@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print only odd numbers of array of numbers in list item.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=[1,22,3,44,56,8,8,9,7,45,6,44,3,334,55,5,65,3,99,45,6]
+            var on= <ul>{ar.map(function(a){
+                return (a%2!=0?<li>{a}</li>:null)
+            })}</ul>
+            ReactDOM.render(on,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

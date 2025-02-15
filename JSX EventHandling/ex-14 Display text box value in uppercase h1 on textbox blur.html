@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Display text box value in uppercase h1 on textbox blur.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function man(){
+                document.getElementById('h1').innerText=document.getElementById('i1').value.toUpperCase()
+            }
+            var tvob= <div><input type="text" onBlur={man} id='i1'/> <h1 id='h1'></h1></div>
+            ReactDOM.render(tvob,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

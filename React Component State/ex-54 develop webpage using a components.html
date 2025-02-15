@@ -1,0 +1,66 @@
+<html>
+    <head>
+    <title>Develop a webpage using components.</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        img{
+            height: 100px;
+            width: 150px;
+            margin: 10px;
+        }
+        #d1{
+            background-color: brown;
+            padding: 10px;
+        }
+        #d2{
+            background-color: rgb(50, 84, 50);
+            padding: 10px;
+            margin: 10px;
+        }
+        #d3{
+            background-color: aqua;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var x=['https://news.cgtn.com/news/2021-10-16/Photos-of-red-deer-stag-during-rutting-season-in-London-14oTMAUkRq0/img/8a42413e56af4a70aab808c67f44fa4e/8a42413e56af4a70aab808c67f44fa4e-750.png',
+               'http://ts1.mm.bing.net/th?id=OIP.lL3dSLNqw_o6F3zV-F8uqwHaE8&pid=15.1',
+               'https://th.bing.com/th/id/OIP._9jMok2tqs5sxtM-J9TIngHaF0?pid=ImgDet&w=189&h=148&c=7&dpr=1.5',
+               'https://th.bing.com/th/id/OIP.V4wA_t2z1VXgqiuTegP7CgHaEK?w=267&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7',
+               'https://wallpapercave.com/wp/lOQ1cyl.jpg']
+            var y=['https://wallpapertag.com/wallpaper/full/9/5/8/956444-cool-sea-animals-wallpapers-2000x1333-lockscreen.jpg',
+              'https://th.bing.com/th/id/R.80cfd52ddf98f352e05dc1daeee9fdcc?rik=dgEXW%2fiw9Vhafw&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f01%2f201581-animals-fish-sea-clownfish.jpg&ehk=M67V0NAvgxJ1UCLg%2fVJ3%2f5y2ZMvexpQ7YjJdCNaCstU%3d&risl=&pid=ImgRaw&r=0',
+              'https://oceanconservancy.org/wp-content/uploads/2017/07/GreatWhiteWow_CherylBlack_blog.jpg',
+              'https://th.bing.com/th/id/OIP.zKOdrrnzCuxUELBHezEKDAHaHa?pid=ImgDet&w=189&h=189&c=7&dpr=1.5',
+              'https://th.bing.com/th/id/R.0dceef5dfb6ec4595efeb1d015739b12?rik=B55ouepOtK8AAw&riu=http%3a%2f%2fwww.animalsworlds.com%2fimages%2fwhales.jpg&ehk=JyK5n1ukoUG9EoF8v%2bSonC15Zc6mDvAHx3oqWQhPAms%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1']
+              function Wild(){
+                return(
+                    <div id='d2'>
+                        <h2>Wild Animals</h2>
+                        {x.map((a)=><img src={a}/>)}
+                        </div>
+                )
+                    }
+                function Sea(){
+                    return(
+                    <div id='d3'>
+                        <h2>Sea Animals</h2>
+                        {y.map((b)=><img src={b}/>)}
+                        </div>)
+                }
+                function Animal(){
+                    return(
+                    <div id='d1'>
+                    <h1>Animals</h1>
+                    <Wild></Wild>
+                    <Sea></Sea>
+                    </div>)}
+                    ReactDOM.render(<Animal/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

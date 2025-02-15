@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Print each object in a seperate list for a given array of student objects in React componen</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Eachobject(){
+                var [x,setX]=React.useState([{name:'mani', class:'12th',age:'22',gender:'m'},
+                {name:'sai',class:'10th',age:'18',gender:'f'},
+                {name:'nani',class:'11th',age:'19',gender:'m'},
+                {name:'ani',class:'12th',age:'20',gender:'f'}
+            ])
+            return(
+                <>{x.map((a)=><ul>
+                    <li>{a.name}</li>
+                    <li>{a.class}</li>
+                    <li>{a.age}</li>
+                    <li>{a.gender}</li>
+                    </ul>)}</>
+            )
+            }
+            ReactDOM.render(<Eachobject/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Parent and child component.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            #d1{
+                border: 3px solid red;
+                padding: 10px;
+            }
+            #d2{
+                border: 3px solid blue;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function Child(props){
+                var [a,setA]=React.useState(100)
+                React.useEffect(()=>{
+                    props.z(a)
+                },[])
+                return(
+                    <div id='d1'>
+                        <h1>Child Component</h1>
+                        <h2>{props.pv}</h2>
+                        </div>
+                )
+            }
+            function Parent(){
+                var [b,setB]=React.useState(200)
+                var [c,setC]=React.useState()
+                function abc(v){
+                    setC(v)
+                }
+                return(
+                    <div id='d2'>
+                        <h1>Parent Component</h1>
+                        <Child pv={b} z={abc}></Child>
+                        <h2>{c}</h2>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Parent/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

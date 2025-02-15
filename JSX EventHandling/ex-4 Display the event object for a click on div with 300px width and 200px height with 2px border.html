@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Display the event object for a click on div with 300px width and
+            200px height with 2px border</title>
+            <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+            <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function mm(e){
+                console.log(e)
+            }
+            var de= <div style={{height:'200px',width:'300px',border:'2px solid'}} onClick={mm}>Click Me</div>
+            ReactDOM.render(de,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

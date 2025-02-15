@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Display radio button value on check</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function man(e){
+                document.getElementById('h1').innerText=e.target.value
+            }
+            var rbv= <div>
+                         <input type="radio" name='country' value='INDIA' onChange={man}/> IND
+                         <input type="radio" name='country' value='UNITED STATES OF AMERICA' onChange={man}/> USA
+                         <h1 id='h1'></h1>
+                     </div>
+            ReactDOM.render(rbv,document.getElementById('b1'))         
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Print merged array values in sorted order of given two arrays.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=[8,2,4,6,885,12,45,22]
+            var br=[32,22,334,56,111,334,121]
+            var mas= <ul>{ar.concat(br).sort(function(a,b){
+                return a-b;
+            }).map(function(a){
+                return <li>{a}</li>
+            })}</ul>
+            ReactDOM.render(mas,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

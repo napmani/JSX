@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print array of strings in lowercasr in list items</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=['mAni','nAni','Anil','prAsad','sAi']
+            var asl= <div>{ar.map(function(a){
+                return <li>{a.toLowerCase()}</li>
+            })}</div>
+            ReactDOM.render(asl,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

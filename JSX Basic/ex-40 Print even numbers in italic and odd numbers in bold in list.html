@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Print even numbers in italic and odd numbers in bold in list.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=[1,2,3,4,5,6,7,8,9,10,11]
+            var eiob= <ul>{ar.map(function(a){
+                return (a%2==0?<li><i>{a}</i></li>:<li><b>{a}</b></li>)
+            })}</ul>
+            ReactDOM.render(eiob,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

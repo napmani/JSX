@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Display the text of h1 on click in console in React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function con(e){
+                console.log(e.target.innerText)
+            }
+            function H1tag(){
+                return(
+                    <h1 onClick={con}>Manikanta Ballina</h1>
+                )
+            }
+            ReactDOM.render(<H1tag/>,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

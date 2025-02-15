@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>print umages from array of image urls.</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            var ar=['https://th.bing.com/th/id/OIP.NRnPiho_TPy9VLNjIIsS5gHaKM?pid=ImgDet&w=178&h=244&c=7&dpr=1.5',
+            'https://th.bing.com/th/id/OIP.CAQPfUE1ic4ZwsOTjJ5PaQHaKi?pid=ImgDet&w=178&h=252&c=7&dpr=1.5',
+        'https://th.bing.com/th/id/OIP.u-scvrxUT5B5zVA75sH5zgHaKL?pid=ImgDet&w=178&h=244&c=7&dpr=1.5']
+        var image= <div>{ar.map(function(a){
+            return <img src={a} width="300px"></img>
+        })}</div>
+        ReactDOM.render(image,document.getElementById('b1'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            h1{
+                background-color: rgb(127, 226, 226);
+                color: red;
+                padding: 5px;
+                margin: 5px;
+                border: 10px solid green;
+            }
+        </style>
+        <title>Generate list of strings for the given array of strings</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <div id="d1">
+                <h1>Welcome to Edupoly</h1>
+            </div>
+            <div id="d2"></div>
+        </div>
+        <script type="text/babel">
+            var ar=['mani','nani','subbu','praveen','prasad','anil','sai']
+            var student=<ul>{ar.map((a)=><li>{a}</li>)}</ul>
+            ReactDOM.render(student,document.getElementById('d2'))
+        </script>
+    </body>
+</html>

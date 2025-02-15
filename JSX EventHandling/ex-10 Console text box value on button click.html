@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Console text box value on button click</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body id="b1">
+    <script type="text/babel">
+      function fun(){
+        console.log(document.getElementById('d1').value)
+      }
+      var tb= <div>
+        <input type="text" id='d1'/>
+        <button onClick={fun}>Enter</button>
+        </div>
+        ReactDOM.render(tb,document.getElementById('b1'))
+    </script>
+  </body>
+</html>

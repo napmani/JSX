@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Display substraction of two text box values in h1 on textbox on button click</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body id="b1">
+        <script type="text/babel">
+            function fun(){
+                document.getElementById('h1').innerText=+document.getElementById('i1').value- +document.getElementById('i2').value 
+            }
+            var dsttv= <div>
+                            <input type="number" id='i1' placeholder='Enter a number'/>
+                            <input type="number" id='i2' placeholder='Enter a number'/>
+                            <button onClick={fun}>substraction</button>
+                            <h1 id='h1'></h1>
+                       </div>
+            ReactDOM.render(dsttv,document.getElementById('b1'))
+        </script>
+    </body>
+</html>
